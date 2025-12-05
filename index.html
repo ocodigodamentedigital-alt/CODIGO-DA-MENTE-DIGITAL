@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manual prático para ler intenções, escrever com presença e transformar atenção em venda.">
+    <title>O Código da Mente Digital — presença que converte</title>
+    
+    <!-- TROCAR O LINK DO CHECKOUT NOS 3 BOTÕES: Busque por "https://pay.cakto.com.br/u5977qi_671277" -->
+    <!-- PIXEL META/TIKTOK: Role até o final do <head> -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #000000;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .hero-visual {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 48px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            border: 1px solid #262626;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-visual::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            height: 60%;
+            background: #ffffff;
+            opacity: 0.05;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
+        }
+        
+        .subtitle {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 32px;
+            color: #ffffff;
+        }
+        
+        @media (max-width: 768px) {
+            .subtitle {
+                font-size: 20px;
+            }
+        }
+        
+        .pain-line {
+            font-size: 16px;
+            color: #bfbfbf;
+            margin-bottom: 16px;
+        }
+        
+        .verdict {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 48px;
+            color: #ffffff;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #ffffff;
+            color: #000000;
+            padding: 18px 48px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
+            letter-spacing: 0.02em;
+            min-height: 56px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(255, 255, 255, 0.15);
+            background: #f5f5f5;
+        }
+        
+        .guarantee {
+            font-size: 14px;
+            color: #bfbfbf;
+            margin-top: 20px;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            background: #0d0d0d;
+            border-radius: 12px;
+            padding: 60px 40px;
+            margin-bottom: 32px;
+        }
+        
+        @media (max-width: 768px) {
+            .content-section {
+                padding: 40px 24px;
+            }
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 32px;
+            line-height: 1.2;
+        }
+        
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 28px;
+            }
+        }
+        
+        .text-secondary {
+            color: #bfbfbf;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .verdict-inline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 600;
+            color: #ffffff;
+            font-size: 18px;
+            margin-top: 20px;
+            display: block;
+        }
+        
+        /* Bullets */
+        .bullets {
+            list-style: none;
+            margin-top: 32px;
+        }
+        
+        .bullets li {
+            padding: 16px 0;
+            border-bottom: 1px solid #1a1a1a;
+            font-size: 16px;
+            color: #ffffff;
+        }
+        
+        .bullets li:last-child {
+            border-bottom: none;
+        }
+        
+        .bullets li::before {
+            content: '→';
+            margin-right: 12px;
+            color: #bfbfbf;
+        }
+        
+        /* Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 32px;
+        }
+        
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .grid-item {
+            background: #000000;
+            padding: 24px;
+            border-radius: 8px;
+            border: 1px solid #1a1a1a;
+        }
+        
+        .grid-item h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .grid-item p {
+            font-size: 14px;
+            color: #bfbfbf;
+        }
+        
+        /* Price Anchor */
+        .price-section {
+            text-align: center;
+            margin: 48px 0;
+        }
+        
+        .price-main {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        
+        .price-comparison {
+            font-size: 16px;
+            color: #bfbfbf;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        /* Three Reasons */
+        .reasons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .reasons {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+        
+        .reason {
+            text-align: center;
+        }
+        
+        .reason h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+        
+        .reason p {
+            font-size: 14px;
+            color: #bfbfbf;
+        }
+        
+        /* FAQ */
+        .faq-item {
+            margin-bottom: 32px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        
+        .faq-question {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .faq-answer {
+            font-size: 16px;
+            color: #bfbfbf;
+        }
+        
+        /* Urgency */
+        .urgency {
+            text-align: center;
+            font-size: 14px;
+            color: #bfbfbf;
+            margin: 40px 0;
+        }
+        
+        /* Footer */
+        footer {
+            background: #000000;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid #1a1a1a;
+        }
+        
+        footer p {
+            font-size: 13px;
+            color: #666666;
+        }
+        
+        /* Center alignment helper */
+        .text-center {
+            text-align: center;
+        }
+        
+        .cta-block {
+            text-align: center;
+            margin: 60px 0;
+        }
+        
+        .microcopy {
+            font-size: 14px;
+            color: #bfbfbf;
+            margin-top: 16px;
+        }
+    </style>
+    
+    <!-- COLOQUE O PIXEL AQUI (META / TIKTOK) -->
+    
+</head>
+<body>
+    
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-visual"></div>
+            <h1>O CÓDIGO DA<br>MENTE DIGITAL</h1>
+            <p class="subtitle">Você não escreve. Você influencia.</p>
+            <p class="pain-line">Você escreve bonito e ninguém sente.</p>
+            <p class="verdict">Você tenta convencer. Eu exponho.</p>
+            <a class="btn" href="https://pay.cakto.com.br/u5977qi_671277">ACESSAR AGORA</a>
+            <p class="guarantee">Garantia 7 dias — aplique e, se não sentir diferença, reembolso.</p>
+        </div>
+    </section>
+    
+    <!-- O QUE É -->
+    <section>
+        <div class="container">
+            <div class="content-section">
+                <h2>Manual. Não curso.</h2>
+                <p class="text-secondary">
+                    Este não é um treinamento longo. É um manual comportamental direto que você aplica em dias.
+                </p>
+                <p class="text-secondary">
+                    Você não vai assistir 40 horas de aula. Você vai ler, entender e operar.
+                </p>
+                <span class="verdict-inline">Não é técnica. É leitura.</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- O QUE APRENDE -->
+    <section>
+        <div class="container">
+            <h2 class="text-center">O que você vai aprender</h2>
+            <ul class="bullets">
+                <li>Ler sinais não-verbais online</li>
+                <li>Construir frases que impõem presença</li>
+                <li>Identificar intenções em mensagens curtas</li>
+                <li>Estruturar copy sem hesitar</li>
+                <li>Ritual de 7 dias para operar sem pensar duas vezes</li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- CONTEÚDO INCLUSO -->
+    <section>
+        <div class="container">
+            <h2 class="text-center">O que está incluído</h2>
+            <div class="grid">
+                <div class="grid-item">
+                    <h3>PDF Completo</h3>
+                    <p>7–10 páginas diretas. Sem enrolação.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>3 Templates de Copy</h3>
+                    <p>Estruturas prontas para adaptar.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Áudios de Presença</h3>
+                    <p>ZIP com todos os áudios. Ouça e absorva.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Plano de 7 Dias</h3>
+                    <p>Ritual diário. Repetição que vira instinto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- PROVA DE PROCESSO -->
+    <section>
+        <div class="container">
+            <div class="content-section">
+                <h2>Como sei que funciona</h2>
+                <p class="text-secondary">
+                    Este método compila práticas que eu uso rotineiramente para escrever e testar copy. Não é teoria: é aplicação documentada.
+                </p>
+                <p class="text-secondary">
+                    Aplicar a estrutura de percepção reduz tempo de escrita e aumenta taxa de resposta. Não invento números. Eu documento processo.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SEGUNDA CTA + PREÇO -->
+    <section>
+        <div class="container">
+            <div class="cta-block">
+                <a class="btn" href="https://pay.cakto.com.br/u5977qi_671277">ACESSAR AGORA</a>
+                <div class="price-section">
+                    <div class="price-main">R$ 29</div>
+                    <p class="price-comparison">
+                        Um consultor cobraria R$ 497 por sessão. Aqui você tem o método completo por R$ 29.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- POR QUE FUNCIONA -->
+    <section>
+        <div class="container">
+            <h2 class="text-center">Por que funciona</h2>
+            <div class="reasons">
+                <div class="reason">
+                    <h3>Presença</h3>
+                    <p>Autoridade do tom. Você não pede atenção. Você a tem.</p>
+                </div>
+                <div class="reason">
+                    <h3>Percepção</h3>
+                    <p>Leitura de intenção. Você vê o que outros ignoram.</p>
+                </div>
+                <div class="reason">
+                    <h3>Ritual</h3>
+                    <p>Repetição que vira instinto. Você não pensa. Você age.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- URGÊNCIA -->
+    <section>
+        <div class="container">
+            <p class="urgency">Preço de lançamento. Pode subir.</p>
+        </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section>
+        <div class="container">
+            <div class="content-section">
+                <h2>Perguntas frequentes</h2>
+                <div class="faq-item">
+                    <div class="faq-question">Preciso ter experiência com copy?</div>
+                    <div class="faq-answer">Não. Precisa saber observar.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Quanto tempo por dia?</div>
+                    <div class="faq-answer">10–20 minutos.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Quando recebo os arquivos?</div>
+                    <div class="faq-answer">Entrega imediata após pagamento.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA FINAL -->
+    <section>
+        <div class="container">
+            <div class="cta-block">
+                <a class="btn" href="https://pay.cakto.com.br/u5977qi_671277">ACESSAR AGORA</a>
+                <p class="microcopy">Entrega instantânea. Comece agora.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 O Código da Mente Digital. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
